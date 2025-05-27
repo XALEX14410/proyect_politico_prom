@@ -6,54 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Partido Progresista por la Democracia (PPD)</title>
     <link rel="stylesheet" href="./assets/css/estilo.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/loader.css">
+    <link rel="stylesheet" href="./assets/css/hero.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">    
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/lib/icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./assets/lib/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Iconos de Bootstrap y Font Awesome ya están incluidos arriba. Si necesitas activar los iconos de Bootstrap, asegúrate de tener este link: -->
+    <link rel="stylesheet" href="./assets/lib/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script src="./assets/js/scroll.js" defer></script>
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/nav-toggle.js"></script>
+    <script src="./assets/js/loader.js"></script>
+    <script src="./assets/js/generarFooter.js"></script>
+
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">PPD</div>
-        <nav>
-            <button class="menu-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
-            <ul class="nav-main">
-                <li><a href="#inicio">Inicio</a></li>
-                <li class="has-submenu">
-                    <a href="#nosotros">¿Quiénes somos?</a>
-                    <ul class="submenu">
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#vida-interna">Vida Interna</a></li>
-                        <li><a href="#lideres">Liderazgo</a></li>
-                    </ul>
-                </li>
-                <li><a href="#plataforma">Plataforma</a></li>
-                <li><a href="#propuestas">Propuestas</a></li>
-                <li class="has-submenu">
-                    <a href="#prensa">Sala de Prensa</a>
-                    <ul class="submenu">
-                        <li><a href="#noticias">Noticias</a></li>
-                        <li><a href="#documentos">Documentos</a></li>
-                        <li><a href="#esenciales">Esenciales</a></li>
-                    </ul>
-                </li>
-                <li><a href="#redes">Redes Sociales</a></li>
-                <li class="has-submenu">
-                    <a href="#transparencia">Transparencia</a>
-                    <ul class="submenu">
-                        <li><a href="#transparencia">Transparencia</a></li>
-                        <li><a href="#datos-personales">Protección de Datos Personales</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="#contacto">Contacto</a></li>
+    <!-- header -->
+    <header class="encabezado" id="encabezado">
+        <!-- Loader -->
+        <div class="centrado hidden">
+            <div class="centrado__icono"></div>
+            <progress class="uk-progress" value="" max=""></progress>
+        </div>
+
+
+        <!-- Botón de menú para pantallas pequeñas -->
+        <button class="nav-toggle" id="nav-toggle">
+            <i class="bi bi-list"> </i> <!-- Icono de hamburguesa -->
+            <i class="bi bi-x-lg"> </i> <!-- Icono de cierre -->
+        </button>
+
+        <!-- Barra de navegación -->
+        <nav class="barra-navegacion" id="barra-navegacion">
+
+            <ul class="nav-list" id="nav_list">
+
+
             </ul>
-            <form class="search-form" action="#" method="get">
-                <input type="search" name="q" placeholder="Buscar..." aria-label="Buscar">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
-            <button class="menu-close" aria-label="Cerrar menú" style="display:none;"><i
-                    class="fas fa-times"></i></button>
+
         </nav>
+
+
     </header>
+    <!-- End header -->
+
 
     <section class="hero">
         <h1>Partido Progresista por la Democracia</h1>
@@ -62,25 +66,30 @@
     </section>
 
     <main>
-        <section id="plataforma" class="section">
-            <h2>Plataforma Electoral y Plan de Gobierno</h2>
-            <p>Presentamos nuestras propuestas para transformar México: justicia, equidad, sostenibilidad, salud,
-                educación y participación ciudadana.</p>
+        <section id="plataforma" class="section plataforma plataforma-electoral plan-gobierno">
+            <h2 class="section-title plataforma-title">
+                <i class="bi bi-flag-fill"></i> Plataforma Electoral y Plan de Gobierno
+            </h2>
+            <p class="section-description plataforma-description">
+                <i class="bi bi-lightbulb-fill"></i>
+                Presentamos nuestras propuestas para transformar México: justicia, equidad, sostenibilidad, salud,
+                educación y participación ciudadana.
+            </p>
         </section>
 
         <section id="propuestas" class="section proposals">
             <h2>10 Propuestas para una Evolución Democrática</h2>
             <ul>
-                <li><strong>1.</strong> Castigo al acoso en todo el país</li>
-                <li><strong>2.</strong> Jubilación digna para amas de casa</li>
-                <li><strong>3.</strong> Licencias de paternidad y maternidad igualitarias</li>
-                <li><strong>4.</strong> Regulación responsable del cannabis</li>
-                <li><strong>5.</strong> Energía limpia y accesible</li>
-                <li><strong>6.</strong> Datos gratuitos para estudiantes</li>
-                <li><strong>7.</strong> Derecho al agua para todos</li>
-                <li><strong>8.</strong> Seguridad sin guerra</li>
-                <li><strong>9.</strong> Abasto de medicamentos garantizado</li>
-                <li><strong>10.</strong> Todos los derechos para todas las personas</li>
+                <li><i class="bi bi-exclamation-triangle-fill"></i> <strong>1.</strong> Castigo al acoso en todo el país</li>
+                <li><i class="bi bi-person-heart"></i> <strong>2.</strong> Jubilación digna para amas de casa</li>
+                <li><i class="bi bi-people-fill"></i> <strong>3.</strong> Licencias de paternidad y maternidad igualitarias</li>
+                <li><i class="bi bi-capsule"></i> <strong>4.</strong> Regulación responsable del cannabis</li>
+                <li><i class="bi bi-sun-fill"></i> <strong>5.</strong> Energía limpia y accesible</li>
+                <li><i class="bi bi-wifi"></i> <strong>6.</strong> Datos gratuitos para estudiantes</li>
+                <li><i class="bi bi-droplet-half"></i> <strong>7.</strong> Derecho al agua para todos</li>
+                <li><i class="bi bi-shield-check"></i> <strong>8.</strong> Seguridad sin guerra</li>
+                <li><i class="bi bi-bandaid-fill"></i> <strong>9.</strong> Abasto de medicamentos garantizado</li>
+                <li><i class="bi bi-people"></i> <strong>10.</strong> Todos los derechos para todas las personas</li>
             </ul>
         </section>
 
